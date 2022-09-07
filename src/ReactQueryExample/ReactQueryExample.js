@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { usePeopleQuery } from "./usePeopleQuery";
+import { usePeopleQuery } from "./useGetPeopleQuery";
 
 const queryClient = new QueryClient();
 
