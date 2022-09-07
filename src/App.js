@@ -2,24 +2,25 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-  const [person, setPerson] = useState({});
+  const [people, setPeople] = useState([]);
 
   useEffect(() => {
-    async function getName() {
-      const response = await fetch("https://www.swapi.tech/api/people/1");
+    async function getPeople() {
+      const response = await fetch("https://www.swapi.tech/api/people");
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
       const json = await response.json();
-      setPerson(json.result);
+      setPeople(json.results);
     }
-    getName();
+    getPeople();
   }, []);
 
-  const { name } = person?.properties || {};
   return (
     <main className="App">
-      <h3>{name}</h3>
+      {people.map((person) => (
+        <p key={person?.uid}>{person?.name}</p>
+      ))}
     </main>
   );
 }
