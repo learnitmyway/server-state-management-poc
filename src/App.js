@@ -3,6 +3,7 @@ import { LocalState } from "./LocalStateExample/LocalStateExample";
 import { ReactQueryExample } from "./ReactQueryExample/ReactQueryExample";
 import { ReduxToolkitExample } from "./ReduxToolkitExample/ReduxToolkitExample";
 import { RtkQueryExample } from "./RtkQueryExample/RtkQueryExample";
+import { VanillaReduxExample } from "./VanillaReduxExample/VanillaReduxExample";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       {/* <LocalState /> */}
       {/* <ReactQueryExample /> */}
       {/* <RtkQueryExample /> */}
-      <ReduxToolkitExample />
+      {/* <ReduxToolkitExample /> */}
+      <VanillaReduxExample />
     </main>
   );
 }
