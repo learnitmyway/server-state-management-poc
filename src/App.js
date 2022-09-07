@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
+  const [person, setPerson] = useState({});
+
+  useEffect(() => {
+    async function getName() {
+      const response = await fetch("https://www.swapi.tech/api/people/1");
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const json = await response.json();
+      setPerson(json.result);
+    }
+    getName();
+  }, []);
+
+  const { name } = person?.properties || {};
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <h3>{name}</h3>
+    </main>
   );
 }
 
