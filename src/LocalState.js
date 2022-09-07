@@ -17,6 +17,7 @@ export function LocalState() {
 
   return (
     <>
+      <h3>---------- Local State ----------</h3>
       {people.map((person) => (
         <p key={person?.uid}>{person?.name}</p>
       ))}
