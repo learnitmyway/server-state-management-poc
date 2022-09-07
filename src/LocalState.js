@@ -10,7 +10,7 @@ export function LocalState() {
         throw new Error("Network response was not ok");
       }
       const json = await response.json();
-      setPeople(json.results);
+      setPeople(json.results.slice(0, 2));
     }
     getPeople();
   }, []);
