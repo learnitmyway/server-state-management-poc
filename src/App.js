@@ -1,5 +1,5 @@
 import "./App.css";
-import { LocalState } from "./LocalState";
+import { LocalState } from "./LocalStateExample/LocalStateExample";
 import { ReactQueryExample } from "./ReactQueryExample/ReactQueryExample";
 
 function App() {
