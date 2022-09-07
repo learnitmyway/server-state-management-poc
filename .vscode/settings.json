@@ -1,4 +1,7 @@
 {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#886369",
     "activityBar.background": "#886369",
