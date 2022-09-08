@@ -39,5 +39,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "fetch-mock": "^9.11.0",
+    "node-fetch": "^3.2.10"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "/node_modules/(?!['node-fetch'])"
+    ]
   }
 }
