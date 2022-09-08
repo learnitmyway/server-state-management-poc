@@ -2,11 +2,12 @@ import { swapiTechApi } from "./swapiTechApi";
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 
+export const rootReducer = {
+  [swapiTechApi.reducerPath]: swapiTechApi.reducer,
+};
+
 export const store = configureStore({
-  reducer: {
-    // Add the generated reducer as a specific top-level slice
-    [swapiTechApi.reducerPath]: swapiTechApi.reducer,
-  },
+  reducer: rootReducer,
   // Adding the api middleware enables caching, invalidation, polling,
   // and other useful features of `rtk-query`.
   middleware: (getDefaultMiddleware) =>
