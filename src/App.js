@@ -8,10 +8,10 @@ import { VanillaReduxExample } from "./VanillaReduxExample/VanillaReduxExample";
 function App() {
   return (
     <main className="App">
+      <RtkQueryExample />
       <ReactQueryExample />
       <LocalStateExample />
       <ReduxToolkitExample />
-      <RtkQueryExample />
       <VanillaReduxExample />
     </main>
   );
