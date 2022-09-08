@@ -1,9 +1,10 @@
 import { usePeopleQuery } from "./useGetPeopleQuery";
 
 export function People() {
-  const { status, data: people } = usePeopleQuery();
+  console.log("React Query People render");
+  const { isLoading, data: people } = usePeopleQuery();
 
-  if (status === "loading") {
+  if (isLoading) {
     return <p>Loading...</p>;
   }
 
